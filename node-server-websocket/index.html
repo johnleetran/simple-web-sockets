@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>web socket example</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="./client.js"></script>
+</head>
+<body>
+
+  <form id="start" method="POST">
+    <input id="startButton" type="button" value="Start">
+    URL: <input id="wsEndpoint" type="text" value="ws://localhost:8080">
+  </form>
+
+  <div id="randomNums"></div>
+
+  <form id="stop" method="POST">
+    <input id="stopButton" type="button" value="Stop"> 
+  </form>
+
+    <form id="send" method="POST">
+      <input id="sendButton" type="button" value="Send">
+    </form>
+ 
+  <script type="text/javascript">
+    wsClient().init();
+  </script>
+
+</body>
+</html>
